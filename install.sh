@@ -26,6 +26,12 @@ echo
 read -p 'Install EyeWitness (y/n)? ' confirm
 if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
     echo 'Installing EyeWitness...'
+
+    git clone https://github.com/FortyNorthSecurity/EyeWitness.git /usr/share/EyeWitness
+    cd /usr/share/EyeWitness/setup
+    ./setup.sh
+    cd ../
+    ln -s EyeWitness.py /usr/bin/EyeWitness
 else
     echo 'Skipping installation of EyeWitness...'
 fi
@@ -44,6 +50,10 @@ echo
 read -p 'Install SQLMap (y/n)? ' confirm
 if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
     echo 'Installing SQLMap...'
+
+    git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git /usr/share/sqlmap
+    chmod +x /usr/share/sqlmap/sqlmap.py
+    ln -s /usr/share/sqlmap/sqlmap.py /usr/bin/sqlmap
 else
     echo 'Skipping installation of SQLMap...'
 fi
@@ -53,6 +63,10 @@ echo
 read -p 'Install CMSMap (y/n)? ' confirm
 if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
     echo 'Installing CMSMap...'
+
+    git clone https://github.com/Dionach/CMSmap.git /usr/share/CMSmap
+    chmod +x /usr/share/CMSmap/cmsmap.py
+    ln -s /usr/share/CMSmap/cmsmap.py /usr/bin/cmsmap
 else
     echo 'Skipping installation of CMSMap...'
 fi
@@ -71,6 +85,12 @@ echo
 read -p 'Install NoSQLMap (y/n)? ' confirm
 if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
     echo 'Installing NoSQLMap...'
+
+    git clone https://github.com/codingo/NoSQLMap.git /usr/share/NoSQLMap
+    cd /usr/share/NoSQLMap
+    python setup.py install
+    chmod +x nosqlmap.py
+    ln -s /usr/share/NoSQLMap/nosqlmap.py /usr/bin/nosqlmap
 else
     echo 'Skipping installation of NoSQLMap...'
 fi

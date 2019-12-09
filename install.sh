@@ -1,3 +1,94 @@
 #!/bin/sh
 
-echo 'Hello, World!'
+echo 'websec-tools v0.1.0\n'
+
+echo 'websec-tools requires certain dependencies.'
+echo 'Do not continue with installation without the following:'
+echo ' - python 3.x'
+echo ' - python >=2.6'
+echo ' - sqlite 3.x'
+echo ' - node.js >=6'
+echo ' - ruby >=2.4'
+echo ' - curl >=7.21'
+echo ' - go >=1.12'
+
+# Install Burp Suite Community.
+echo
+read -p 'Install Burp Suite Community (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing Burp Suite Community...'
+else
+    echo 'Skipping installation of Burp Suite Community...'
+fi
+
+# Install EyeWitness.
+echo
+read -p 'Install EyeWitness (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing EyeWitness...'
+else
+    echo 'Skipping installation of EyeWitness...'
+fi
+
+# Install BeEF Exploitation Framework.
+echo
+read -p 'Install BeEF Exploitation Framework (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing BeEF Exploitation Framework...'
+else
+    echo 'Skipping installation of BeEF Exploitation Framework...'
+fi
+
+# Install SQLMap.
+echo
+read -p 'Install SQLMap (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing SQLMap...'
+else
+    echo 'Skipping installation of SQLMap...'
+fi
+
+# Install CMSMap.
+echo
+read -p 'Install CMSMap (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing CMSMap...'
+else
+    echo 'Skipping installation of CMSMap...'
+fi
+
+# Install WPScan.
+echo
+read -p 'Install WPScan (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing WPScan...'
+else
+    echo 'Skipping installation of WPScan...'
+fi
+
+# Install NoSQLMap.
+echo
+read -p 'Install NoSQLMap (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing NoSQLMap...'
+else
+    echo 'Skipping installation of NoSQLMap...'
+fi
+
+# Install ZAP Proxy.
+echo
+read -p 'Install ZAP Proxy (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing ZAP Proxy...'
+else
+    echo 'Skipping installation of ZAP Proxy...'
+fi
+
+# Install GoBuster.
+echo
+read -p 'Install GoBuster (y/n)? ' confirm
+if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo 'Installing GoBuster...'
+else
+    echo 'Skipping installation of GoBuster...'
+fi

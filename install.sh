@@ -41,6 +41,10 @@ echo
 read -p 'Install BeEF Exploitation Framework (y/n)? ' confirm
 if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
     echo 'Installing BeEF Exploitation Framework...'
+    
+    git clone https://github.com/beefproject/beef.git /usr/share/BeEF
+    cd /usr/share/BeEF
+    ./install
 else
     echo 'Skipping installation of BeEF Exploitation Framework...'
 fi
